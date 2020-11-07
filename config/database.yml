@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: nobe_bank_development
+
+test:
+  <<: *default
+  database: nobe_bank_test
+
+production:
+  <<: *default
+  database: nobe_bank_production
+  username: postgres
+  password: postgres
