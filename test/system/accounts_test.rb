@@ -14,6 +14,7 @@ class AccountsTest < ApplicationSystemTestCase
     visit accounts_url
     click_on "New Account"
 
+    fill_in "Account number", with: @account.account_number
     fill_in "Account type", with: @account.account_type_id
     fill_in "Agency", with: @account.agency
     fill_in "Balance", with: @account.balance
@@ -29,6 +30,7 @@ class AccountsTest < ApplicationSystemTestCase
     visit accounts_url
     click_on "Edit", match: :first
 
+    fill_in "Account number", with: @account.account_number
     fill_in "Account type", with: @account.account_type_id
     fill_in "Agency", with: @account.agency
     fill_in "Balance", with: @account.balance
